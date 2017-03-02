@@ -1,8 +1,18 @@
 import React = require('react');
 import { Automation } from '../../common/automation'
 
-export class SocialLink extends React.Component<{}, {}> {
-  render() {
-    return <a data-automation-id={Automation.SOCIAL_LINK}>Social Link</a>;
-  }
+import { Image } from '../';
+
+interface SocialLinkProps {
+  imageSrc: string;
+  placeholderSrc?: string;
+  onClick: React.EventHandler<any>;
+}
+
+export function SocialLink(props: SocialLinkProps) {
+  return (
+    <div data-automation-id={Automation.SOCIAL_LINK} onClick={props.onClick}>
+      <Image src={props.imageSrc} placeholder={props.placeholderSrc}/>
+    </div>
+  )
 }

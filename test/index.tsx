@@ -1,1 +1,1 @@
-import './components/test-client';
+import './components';
