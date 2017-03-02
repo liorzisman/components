@@ -3,15 +3,17 @@ import { Automation } from '../../common/automation'
 
 import { Image } from '../';
 
-interface SocialLinkProps {
+interface ImageLinkProps {
   imageSrc: string;
   placeholderSrc?: string;
-  onClick: React.EventHandler<any>;
+  url: string;
 }
 
-export function SocialLink(props: SocialLinkProps) {
+export function ImageLink(props: ImageLinkProps) {
+
   return (
-    <div data-automation-id={Automation.SOCIAL_LINK} onClick={props.onClick}>
+    <div data-automation-id={Automation.IMAGE_LINK}
+         onClick={() => window.location.href = props.url}>
       <Image src={props.imageSrc} placeholder={props.placeholderSrc}/>
     </div>
   )

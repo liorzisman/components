@@ -1,4 +1,4 @@
 export const Automation = {
-  SOCIAL_LINK: 'social-link',
+  IMAGE_LINK: 'image-link',
   IMAGE: 'image'
 };
