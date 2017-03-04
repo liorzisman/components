@@ -1,10 +1,11 @@
 import React = require('react');
-import { Image, ImageLink, TextInput } from './index'
+import { Image, ImageLink, TextInput, CheckBox } from './index'
 
 const placeholderUrl = 'https://placeholdit.imgix.net/~text?txtsize=13&txt=140%C3%97100&w=140&h=100';
 
 interface AppState {
   textInputValue: string;
+  checkBoxValue: boolean;
 }
 
 
@@ -14,9 +15,18 @@ export class App extends React.Component<{}, AppState> {
     super();
 
     this.state = {
-      textInputValue: ''
+      textInputValue: '',
+      checkBoxValue: true
     };
   }
+
+  textInputOnChange = (e) => {
+    this.setState({textInputValue: e.target.value})
+  };
+
+  checkBoxOnChange = () => {
+    this.setState({checkBoxValue: !this.state.checkBoxValue});
+  };
 
   render() {
     return (
@@ -32,7 +42,11 @@ export class App extends React.Component<{}, AppState> {
         </section>
         <section>
           <h3>{'<TextInput />'}</h3>
-          <TextInput value={this.state.textInputValue} onChange={e => this.setState({textInputValue: e.target.value}}/>
+          <TextInput value={this.state.textInputValue} onChange={this.textInputOnChange} />
+        </section>
+        <section>
+          <h3>{'<CheckBox />'}</h3>
+          <CheckBox value={this.state.checkBoxValue} onChange={this.checkBoxOnChange} />
         </section>
       </div>
     )
