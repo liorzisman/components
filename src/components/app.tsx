@@ -1,5 +1,5 @@
 import React = require('react');
-import { Image, ImageLink, TextInput, CheckBox } from './index'
+import { Image, ImageLink, TextInput, CheckBox, Button } from './index'
 
 const placeholderUrl = 'https://placeholdit.imgix.net/~text?txtsize=13&txt=140%C3%97100&w=140&h=100';
 
@@ -47,6 +47,10 @@ export class App extends React.Component<{}, AppState> {
         <section>
           <h3>{'<CheckBox />'}</h3>
           <CheckBox value={this.state.checkBoxValue} onChange={this.checkBoxOnChange} />
+        </section>
+        <section>
+          <h3>{'<Button />'}</h3>
+          <Button label="Magic" onClick={this.checkBoxOnChange} />
         </section>
       </div>
     )
