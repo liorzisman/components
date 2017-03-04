@@ -1,13 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: 'src/index.html',
+  template: 'src/demo/index.html',
   inject: 'body',
-  chunks: ['client']
+  chunks: ['demo']
 });
 
 module.exports = {
   entry: {
     client: './src/index.tsx',
+    demo: './src/demo/index.tsx',
     webtest: 'mocha-loader!./test/index.tsx'
   },
   output: {

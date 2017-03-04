@@ -1,23 +1,21 @@
 {
-  "name": "components",
-  "version": "1.0.0",
+  "name": "react-controlled-components",
+  "version": "1.0.1",
   "description": "components that i use in my apps",
-  "main": "./src/client/index.tsx",
+  "main": "./src/index.tsx",
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --hot --inline",
-    "clean": "rm -rf dist",
-    "server": "node src/server/server.js"
+    "clean": "rm -rf dist"
   },
   "keywords": [
+    "controlled",
     "components",
     "react"
   ],
   "author": "Lior Zisman",
   "license": "ISC",
   "devDependencies": {
-    "@types/axios": "^0.9.34",
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.37",
     "@types/node": "^7.0.0",
@@ -40,12 +38,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "axios": "^0.15.3",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "ip": "^1.1.4",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "uuid-v4": "^0.1.0"
+    "react-dom": "^15.4.2"
   }
 }
