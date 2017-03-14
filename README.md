@@ -1,6 +1,9 @@
 # components
 A few Controlled Components that I use in my apps.
 
+[![NPM](https://nodei.co/npm/<package>.png?mini=true)](https://npmjs.org/package/<package>)
+
+Expect frequent updates with more components.
 
 ## Basic Components
 
