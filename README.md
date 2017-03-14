@@ -5,6 +5,12 @@ A few Controlled Components that I use in my apps.
 
 Expect frequent updates with more components.
 
+## How to use
+
+1. Install the package using npm: ```npm install --save react-controlled-components```
+2. Import the required components (for example: ```import { Button } from 'react-controlled-components';```)
+3. That's it! the components are ready for use.
+
 ## Basic Components
 
 ### Image
