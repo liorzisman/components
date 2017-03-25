@@ -4,5 +4,7 @@ export const Automation = {
   TEXT_INPUT: 'text-input',
   CHECK_BOX: 'check-box',
   BUTTON: 'button',
-  SLIDER: 'slider'
+  SLIDER: 'slider',
+  RATE_PICKER: 'rate-picker',
+  RATING_STAR: 'rating-star'
 };
