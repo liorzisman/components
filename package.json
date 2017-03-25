@@ -1,6 +1,6 @@
 {
   "name": "react-controlled-components",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "components that i use in my apps",
   "main": "./src/index.tsx",
   "scripts": {
@@ -13,7 +13,14 @@
     "components",
     "react"
   ],
-  "author": "Lior Zisman",
+  "author": {
+    "name": "Lior Zisman",
+    "email": "liorzisman@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liorzisman/components.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^3.4.34",

@@ -7,13 +7,14 @@ const htmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: {
-    client: './src/index.tsx',
-    demo: './src/demo/index.tsx',
-    webtest: 'mocha-loader!./test/index.tsx'
+    client: './src/index.tsx'
+    // demo: './src/demo/index.tsx',
+    // webtest: 'mocha-loader!./test/index.tsx'
   },
   output: {
     path: __dirname + '/dist',
-    filename: '[name].bundle.js'
+    // filename: '[name].bundle.js'
+    filename: 'index.js'
   },
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']

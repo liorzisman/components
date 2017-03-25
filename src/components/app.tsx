@@ -4,8 +4,8 @@ import { Image, ImageLink, TextInput, CheckBox, Button } from './index'
 const placeholderUrl = 'https://placeholdit.imgix.net/~text?txtsize=13&txt=140%C3%97100&w=140&h=100';
 
 interface AppState {
-  textInputValue: string;
-  checkBoxValue: boolean;
+  textInputValue?: string;
+  checkBoxValue?: boolean;
 }
 
 
