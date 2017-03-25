@@ -3,5 +3,6 @@ export const Automation = {
   IMAGE: 'image',
   TEXT_INPUT: 'text-input',
   CHECK_BOX: 'check-box',
-  BUTTON: 'button'
+  BUTTON: 'button',
+  SLIDER: 'slider'
 };

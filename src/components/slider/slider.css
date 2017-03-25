@@ -1,0 +1,23 @@
+.controlled-slider {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.controlled-slider .native-slider {
+    flex: 0 1 75%;
+}
+
+.controlled-slider .slider-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controlled-slider .slider-split {
+    width: 75%;
+}
+
+.controlled-slider .slider-value {
+    border: 1px solid lightgray;
+    padding: 2px 4px;
+}

@@ -1,12 +1,15 @@
 import React = require('react');
-import { Image, ImageLink, TextInput, CheckBox, Button } from './index'
+import { Image, ImageLink, TextInput, CheckBox, Button, Slider } from './index'
 
 const placeholderUrl = 'https://placeholdit.imgix.net/~text?txtsize=13&txt=140%C3%97100&w=140&h=100';
 
 interface AppState {
   textInputValue?: string;
   checkBoxValue?: boolean;
+  sliderValue?: number;
 }
+
+import './app.css';
 
 
 export class App extends React.Component<{}, AppState> {
@@ -16,7 +19,8 @@ export class App extends React.Component<{}, AppState> {
 
     this.state = {
       textInputValue: '',
-      checkBoxValue: true
+      checkBoxValue: true,
+      sliderValue: 55
     };
   }
 
@@ -26,6 +30,13 @@ export class App extends React.Component<{}, AppState> {
 
   checkBoxOnChange = () => {
     this.setState({checkBoxValue: !this.state.checkBoxValue});
+  };
+
+  onSliderChange = (e) => {
+    this.setState({
+      sliderValue: e.target.value,
+      textInputValue: e.target.value.toString()
+    });
   };
 
   render() {
@@ -51,6 +62,10 @@ export class App extends React.Component<{}, AppState> {
         <section>
           <h3>{'<Button />'}</h3>
           <Button label="Magic" onClick={this.checkBoxOnChange} />
+        </section>
+        <section>
+          <h3>{'<Slider />'}</h3>
+          <Slider step={5} min={0} max={150} value={this.state.sliderValue} onChange={this.onSliderChange}/>
         </section>
       </div>
     )
