@@ -1,8 +1,8 @@
 {
   "name": "react-controlled-components",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "components that i use in my apps",
-  "main": "./src/index.tsx",
+  "main": "index.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --hot --inline",
