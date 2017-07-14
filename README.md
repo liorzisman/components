@@ -1,9 +1,11 @@
 # components
-A few Controlled Components that I use in my apps.
+A few Controlled components for React.js that i use in my apps.
 
 [![NPM](https://nodei.co/npm/react-controlled-components.png?mini=true)](https://npmjs.org/package/react-controlled-components)
 
-Expect frequent updates with more components.
+## What is a controlled component?
+A controlled component usually does not maintain his own value as a state.
+It gets it from a parent component, along with a function to let the parent know an action to change the value has occurred.
 
 ## How to use
 
