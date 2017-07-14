@@ -1,1 +1,0 @@
-export { RatePicker } from './rate-picker';

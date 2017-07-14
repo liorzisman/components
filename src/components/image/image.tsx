@@ -1,12 +1,12 @@
 import React = require('react');
 import { Automation } from '../../common/automation'
 
-interface ImageProps {
+export interface ImageProps {
   src: string;
   placeholder?: string;
 }
 
-interface ImageState {
+export interface ImageState {
   errorLoadingSrc: boolean;
 }
 

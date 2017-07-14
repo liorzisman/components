@@ -1,47 +1,27 @@
 import React = require('react');
 
-import { expect, selectDom, waitForDom, sinon, waitFor } from 'test-drive';
-import { simulate } from '../test-aux';
+import { expect, sinon, waitFor, simulate, ClientRenderer } from 'test-drive-react';
 import { Button } from '../../src/components';
 import { Automation } from '../../src/common/automation';
 
-const ReactDOM = require('react-dom');
-
-function doNothing() {}
-
 describe('<Button />', () => {
-  let app, select;
-
-  before(() => {
-    app = document.createElement('div');
-    app.id = 'app';
-    document.body.appendChild(app);
-    select = selectDom(app);
-  });
+  const clientRenderer = new ClientRenderer();
 
   afterEach(() => {
-    const newApp = document.createElement('div');
-    newApp.id = 'app';
-    document.body.replaceChild(newApp, app);
-    app = newApp;
-    select = selectDom(app);
-  });
-
-  after(() => {
-    document.body.removeChild(app);
+    clientRenderer.cleanup();
   });
 
   it('is rendered to the screen', () => {
-    ReactDOM.render(<Button label="Button" onClick={doNothing} />, app);
+    const { select, waitForDom } = clientRenderer.render(<Button label="Button" onClick={() => {}} />);
     const button = select(Automation.BUTTON);
 
-    return waitForDom(app, () => expect(button).to.be.present());
+    return waitForDom(() => expect(button).to.be.present());
   });
 
   it('invokes onClick when clicked', () => {
     const onClick = sinon.spy();
 
-    ReactDOM.render(<Button label="Button" onClick={onClick} />, app);
+    const { select } = clientRenderer.render(<Button label="Button" onClick={onClick} />);
     simulate.click(select(Automation.BUTTON));
 
     return waitFor(() => expect(onClick).to.have.been.calledOnce);

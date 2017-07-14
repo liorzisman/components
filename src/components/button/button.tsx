@@ -1,7 +1,7 @@
 import React = require('react');
 import { Automation } from '../../common/automation'
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
   onClick: React.FormEventHandler<HTMLButtonElement>;
 }
