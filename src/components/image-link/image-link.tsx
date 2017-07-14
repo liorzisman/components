@@ -3,7 +3,7 @@ import { Automation } from '../../common/automation'
 
 import { Image } from '../';
 
-interface ImageLinkProps {
+export interface ImageLinkProps {
   imageSrc: string;
   placeholderSrc?: string;
   url: string;

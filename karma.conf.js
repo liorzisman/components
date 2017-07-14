@@ -1,8 +1,17 @@
 // Karma configuration
 // Generated on Sun Jan 15 2017 21:23:32 GMT+0200 (Jerusalem Standard Time)
 
+const webpack = require('./webpack.config');
+
 module.exports = function(config) {
   config.set({
+    // this key is used by karma-webpack
+    webpack,
+
+    // the default mime type for ts files is video/mp2t, which Chrome won't execute, so force correct mime type
+    mime: {
+      "text/x-typescript": ["ts", "tsx"],
+    },
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -15,6 +24,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      './test/index.browser.ts'
     ],
 
 
@@ -26,6 +36,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      './test/index.browser.ts': ['webpack']
     },
 
 
@@ -49,7 +60,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // start these browsers
@@ -65,4 +76,4 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
-}
+};

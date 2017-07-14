@@ -1,6 +1,6 @@
 import React = require('react');
 
-import {expect, selectDom, waitForDom} from 'test-drive';
+import {expect, selectDom, waitForDom} from 'test-drive-react';
 import { ImageLink } from '../../src/components';
 import { Automation } from '../../src/common/automation';
 

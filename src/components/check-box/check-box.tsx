@@ -1,7 +1,7 @@
 import React = require('react');
 import { Automation } from '../../common/automation'
 
-interface CheckBoxProps {
+export interface CheckBoxProps {
   value: boolean;
   onChange: React.FormEventHandler<HTMLInputElement>;
 }

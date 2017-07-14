@@ -27,6 +27,3 @@ A simple toggle component.
 
 ### Button
 A simple button.
-
-### Slider
-A simple range input added, with labels for its value, min and max.

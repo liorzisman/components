@@ -1,7 +1,7 @@
 import React = require('react');
 import { Automation } from '../../common/automation'
 
-interface TextInputProps {
+export interface TextInputProps {
   value: string;
   placeholder?: string;
   onChange: React.FormEventHandler<HTMLInputElement>;

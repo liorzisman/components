@@ -1,7 +1,6 @@
 import React = require('react');
 
-import { expect, selectDom, waitForDom, sinon, waitFor } from 'test-drive';
-import { simulate } from '../test-aux';
+import { expect, selectDom, waitForDom, sinon, waitFor, simulate } from 'test-drive-react';
 import { TextInput } from '../../src/components';
 import { Automation } from '../../src/common/automation';
 
@@ -42,9 +41,10 @@ describe('<TextInput />', () => {
     ReactDOM.render(<TextInput value="" onChange={onChange}/>, app);
 
     const textInput = select(Automation.TEXT_INPUT, 'NATIVE_INPUT');
-    simulate.change(textInput, {data: 'hello'});
+    textInput.value = 'hello';
+    simulate.change(textInput);
 
-    return waitFor(() => expect(onChange).to.have.been.calledWithMatch({data: 'hello'}));
+    return waitFor(() => expect(onChange).to.have.been.calledOnce);
   });
 
 });
