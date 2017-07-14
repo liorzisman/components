@@ -9,9 +9,7 @@
     "start": "webpack-dev-server --hot --inline --progress",
     "clean": "rm -rf ./dist",
     "prepublish": "npm run build",
-    "test": "npm run test:node && npm run test:browser",
-    "test:node": "mocha --compilers ts:ts-node/register,tsx:ts-node/register ./test/index.node.ts",
-    "test:browser": "karma start --single-run"
+    "test": "karma start --single-run"
   },
   "keywords": [
     "controlled",
