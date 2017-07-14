@@ -5,7 +5,9 @@ A few Controlled components for React.js that i use in my apps.
 
 ## What is a controlled component?
 [Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components) do not maintain their own value as a state.
-It gets it from a parent component, along with a function to let the parent know an action to change the value has occurred.
+
+
+They get it from a parent component, along with a function to let the parent know an action to change the value has occurred.
 
 ## How to use
 
