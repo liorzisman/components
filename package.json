@@ -1,6 +1,6 @@
 {
   "name": "react-controlled-components",
-  "version": "1.0.14",
+  "version": "2.0.0",
   "description": "Controlled components for React.js that i use in my apps",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",

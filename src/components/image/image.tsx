@@ -4,6 +4,7 @@ import { Automation } from '../../common/automation'
 export interface ImageProps {
   src: string;
   placeholder?: string;
+  className?: string;
 }
 
 export interface ImageState {
@@ -26,7 +27,7 @@ export class Image extends React.Component<ImageProps, ImageState> {
 
   render() {
     return (
-      <div data-automation-id={Automation.IMAGE}>
+      <div data-automation-id={Automation.IMAGE} className={this.props.className || 'comp-default'}>
         { this.state.errorLoadingSrc ?
           <img data-automation-id="IMAGE_PLACEHOLDER" src={this.props.placeholder} />
           :
